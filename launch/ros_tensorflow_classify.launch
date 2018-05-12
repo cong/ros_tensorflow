@@ -1,0 +1,6 @@
+<launch>
+
+  <node pkg="ros_tensorflow" name="ros_tensorflow_classify" type="ros_tensorflow_classify.py" output="screen"> 
+  </node>
+
+</launch>

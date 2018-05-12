@@ -1,0 +1,6 @@
+<launch>
+
+  <node pkg="ros_tensorflow" name="ros_tensorflow_minst" type="ros_tensorflow_mnist.py" output="screen"> 
+  </node>
+
+</launch>

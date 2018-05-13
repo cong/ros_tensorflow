@@ -99,7 +99,7 @@ if __name__ == '__main__':
     ROOT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
     # Path to frozen detection graph. This is the actual model that is used for the object detection.
-    #MODEL_NAME = 'ssd_inception_v2_coco_11_06_2017'
+    #MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
     PATH_TO_CKPT = ROOT_PATH + '/include/object_detector/frozen_inference_graph.pb'
 
     # List of the strings that is used to add correct label for each box.

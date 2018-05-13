@@ -6,17 +6,14 @@ from cv_bridge import CvBridge
 import cv2
 import numpy as np
 import tensorflow as tf
-import classify_image
 import os
-
 import re
 
 
 class RosTensorFlow():
     def __init__(self):
-        # classify_image.maybe_download_and_extract()
+       
         self._session = tf.Session()
-
         self._cv_bridge = CvBridge()
 
         self._sub = rospy.Subscriber('usb_cam/image_raw', Image, self.callback, queue_size=1)
@@ -62,29 +59,23 @@ class RosTensorFlow():
         return node_id_to_name
     def callback(self, image_msg):
         cv_image = self._cv_bridge.imgmsg_to_cv2(image_msg, "bgr8")
-        # copy from
-        # classify_image.py
         image_data = cv2.imencode('.jpg', cv_image)[1].tostring()
+
         # Creates graph from saved GraphDef.
         softmax_tensor = self._session.graph.get_tensor_by_name('softmax:0')
         predictions = self._session.run(
             softmax_tensor, {'DecodeJpeg/contents:0': image_data})
         predictions = np.squeeze(predictions)
+
         # Creates node ID --> English string lookup.
-        # node_lookup = classify_image.NodeLookup()
-        
-        #-----
         node_lookup = self.load(PATH_TO_LABELS, PATH_TO_UID)
-        #-----
         top_k = predictions.argsort()[-self.use_top_k:][::-1]
         for node_id in top_k:
-            #------
+            
             if node_id not in node_lookup:
                 human_string = ''
             else:
                 human_string = node_lookup[node_id]
-
-            #------
 
             score = predictions[node_id]
             if score > self.score_threshold:
@@ -95,7 +86,6 @@ class RosTensorFlow():
         rospy.spin()
 
 if __name__ == '__main__':
-    # classify_image.setup_args()
     
     ROOT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
     PATH_TO_CKPT = ROOT_PATH + '/include/classifier/classify_image_graph_def.pb'

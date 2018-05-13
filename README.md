@@ -44,9 +44,15 @@ roscore
 roslaunch usb_cam usb_cam-test.launch
 
 # Third, open another terminal, then execute
+<<<<<<< HEAD
+roslaunch ros_tensorflow ros_tensorflow_mnist.launch
+# You can echo a topic to receive the string message.
+rostopic echo /result_ripe
+=======
 rosrun ros_tensorflow ros_tensorflow_mnist.launch
 # You can echo a topic to receive the string message.
 rosrun echo /result_ripe
+>>>>>>> af924477ce559148fe22fe119d513a68f99a90b7
 ```
 
 #### For object recognition:
@@ -54,16 +60,26 @@ rosrun echo /result_ripe
 ```sh
 # For 
 # Third, open another terminal, then execute
+<<<<<<< HEAD
+roslaunch ros_tensorflow ros_tensorflow_classify.launch
+# You can echo a topic to receive the string message.
+rostopic echo /result_ripe
+=======
 rosrun ros_tensorflow ros_tensorflow_classify.launch
 # You can echo a topic to receive the string message.
 rosrun echo /result_ripe
+>>>>>>> af924477ce559148fe22fe119d513a68f99a90b7
 ```
 
 #### For object detection:
 
 ```sh
 # Third, open another terminal, then execute
+<<<<<<< HEAD
+roslaunch ros_tensorflow ros_tensorflow_detect.launch
+=======
 rosrun ros_tensorflow ros_tensorflow_detect.launch
+>>>>>>> af924477ce559148fe22fe119d513a68f99a90b7
 # You can through "image_view" node to receive images detected.
 rosrun image_view image_view image:=/result_ripe
 ```
@@ -78,4 +94,8 @@ Receive an image : `usb_cam/image_raw`
 
 - You can realize your project by replacing the files in "ros_tensorflow/include/" with your own files.
 - If you feel that it is helpful to you, please give me a star. Thx!  :)
+<<<<<<< HEAD
+- For more information you can visit the [Blog](wangcong.info).
+=======
 - For more information you can visit the [Blog]().
+>>>>>>> af924477ce559148fe22fe119d513a68f99a90b7

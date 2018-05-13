@@ -52,7 +52,6 @@ rostopic echo /result_ripe
 #### For object recognition:
 
 ```sh
-# For 
 # Third, open another terminal, then execute
 roslaunch ros_tensorflow ros_tensorflow_classify.launch
 # You can echo a topic to receive the string message.
@@ -78,4 +77,4 @@ Receive an image : `usb_cam/image_raw`
 
 - You can realize your project by replacing the files in "ros_tensorflow/include/" with your own files.
 - If you feel that it is helpful to you, please give me a star. Thx!  :)
-- For more information you can visit the [Blog]().
+- For more information you can visit the [Blog](wangcong.info).

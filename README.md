@@ -9,7 +9,7 @@ And through this repo, you can realize **mnist**, **object recognition**, and **
 ## Requirements
 
 - Ubuntu
-- [Install ROS](http://wiki.ros.org/ROS/Installation) with [catkin build](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). Create a catkin workspace.
+- [Install ROS(Kinetic)](http://wiki.ros.org/ROS/Installation) with [catkin build](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). Create a catkin workspace.
 - [Install Tensorflow](https://www.tensorflow.org/install/)
 - [Install CUDA 6.5 for NVIDIA TK1](https://gist.github.com/jetsonhacks/6da905e0675dcb5cba6f) (Choosing according to your needs)
 

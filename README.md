@@ -8,10 +8,16 @@ And through this repo, you can realize **mnist**, **object recognition**, and **
 
 ## Requirements
 
-- Ubuntu 16.04
-- [Install ROS(Kinetic)](http://wiki.ros.org/ROS/Installation) with [catkin build](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). Create a catkin workspace.
+- Ubuntu 16.04 with Python2.7
+- [Install ROS(Kinetic-desktop-full)](http://wiki.ros.org/kinetic/Installation/Ubuntu) with [catkin build](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). Create a catkin workspace.
 - [Install Tensorflow](https://www.tensorflow.org/install/)(1.2.0-1.10.0 all be ok)
 - [Install CUDA 6.5 for NVIDIA TK1](https://gist.github.com/jetsonhacks/6da905e0675dcb5cba6f) (Choosing according to your needs)
+- Some dependencies
+  ```sh
+  sudo apt-get install protobuf-compiler python-pil python-lxml
+  sudo pip install jupyter
+  sudo pip install matplotlib
+  ```
 
 ## Grab the source
 
